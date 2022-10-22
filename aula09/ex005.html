@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com o DOM</h1>
+    <p>Aqui <strong>vai</strong> o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim por id</div>
+    <div class="msg2">ClassName</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1];
+        p1.style.color = 'red'
+        corpo.style.background = 'black'
+        document.writeln(p1.innerText)
+
+        //getElementById vai pegar o elemento pelo id 
+        //e para uma possível manipulação
+        
+        var d = window.document.getElementById('msg')
+
+        d.style.color = 'blue'
+        d.style.background = 'white'
+        d.innerText = 'Estou aguardando'
+        var classe = window.document.getElementsByClassName('msg2')[0]
+        classe.innerText = 'Modifiquei por nome da classe'
+
+        //fazer por seletor
+
+        var seletor = window.document.querySelector('div#msg')
+        var seletorClasse = window.document.querySelector('div.msg2')
+        seletor.style.background = 'green'
+        seletorClasse.style.background = 'gray'
+        
+
+      </script>
+</body>
+</html>

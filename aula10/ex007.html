@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
     <style>
-        body{
+        body {
             font: normal 18pt Arial;
 
         }
-        input{
+
+        input {
             font: normal 18pt Arial;
             width: 100px;
         }
-        div#res{
+
+        div#res {
             margin-top: 20px;
         }
     </style>
@@ -29,13 +31,13 @@
     <input type="button" value="Somar" onclick="somar()">
     <div id="res">Resultado</div>
     <script>
-        function somar(){
+        function somar() {
             var tn1 = window.document.getElementById("txtn1")
             var tn2 = window.document.getElementById("txtn2")
             var res = window.document.getElementById("res")
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
-            var s = n1+n2
+            var s = n1 + n2
             //placeholder ${s}
             res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>`
         }

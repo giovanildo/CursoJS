@@ -1,0 +1,46 @@
+<!-- Fazer uma versão html do exercicio 009
+criar um h1 vivendo em pais
+criar um input para colocar o pais de origem e outro para o pais onde está vivendo
+criar um botão para verificar 
+criar uma função para executar a verificação
+
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estrangeiro ou Nativo?</h1>
+    <p>Onde você mora hoje? <input type="text" name="txtOndeMora" id="txtOndeMora"></p>
+    <p>Onde você nasceu? <input type="text" name="txtOndeNasceu" id="txtOndeNasceu"></p>
+    <input type="button" value="Estrangeiro?" onclick="descobrir()">
+    <div id="res">
+        Resultado:
+    </div>
+    <script>
+        function descobrir() {
+            var ondeMora = window.document.getElementById("txtOndeMora").value
+            var ondeNasceu = window.document.getElementById("txtOndeNasceu").value
+            var res = window.document.getElementById("res")
+            res.innerHTML = `Você mora em <strong>${ondeMora}</strong> e nasceu em <strong>${ondeNasceu}</strong> então `
+            if(ondeMora == ondeNasceu){
+                res.innerHTML += `<p>Você é Nativo</p`
+            } else {
+                res.innerHTML += `<p>Você é Gringo</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>

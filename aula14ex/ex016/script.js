@@ -19,7 +19,7 @@ function gerarSequencia() {
     var fim = document.getElementById('txtFinal').value
     var salto = document.getElementById('txtSalto').value
 
-    if (inicio.length == 0 || fim.length == 0 || salto.length == 0)  {
+    if (inicio.length == 0 || fim.length == 0 || salto.length == 0) {
         alert('Erro - preencha os campos')
         return
     }
@@ -27,7 +27,7 @@ function gerarSequencia() {
     inicio = Number(inicio)
     fim = Number(fim)
     salto = Number(salto)
-    
+
     var texto = '';
     if (inicio > fim) {
         for (let c = inicio; c >= fim; c -= salto) {
